@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './styles.css'
+const App = () => {
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const estilosDoBotao = { marginTop: 12, paddingTop: 8, paddingBottom: 8, backgroundColor: 'blueviolet', color: 'white', border: 'none', width: '100%', borderRadius: 8 }
+const textoDoRotulo = 'Nome'
+const obterTextoDoBotao = () => 'Enviar'
+const aoClicar = () => alert('Enviado!')
+return (
+        <div style={{margin: 'auto', width: 768, backgroundColor: '#EEE', padding: 12, borderRadius: 8}}>
+            <label className='rotulo' htmlFor='nome' style={{display: 'block', marginBottom: 4}}>{textoDoRotulo}</label>
+            <input type= 'text' id='nome' style={{paddingTop: 8, paddingBottom: 8, borderStyle: 'hidden', width: '100%', borderRadius: 8,outline: 'none'
+            }}></input>
+            <button 
+                onClick={() => aoClicar()}
+                style={estilosDoBotao}>{obterTextoDoBotao()}
+            </button>
+        </div>
+        )
+}
+
+ReactDOM.render(
+    <App />,
+    document.querySelector('#root')
+)
