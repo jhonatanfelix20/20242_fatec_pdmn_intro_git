@@ -99,7 +99,7 @@ class App extends React.Component {
             
 
     icones = {
-        'Primavera': 'fa-sedding',
+        'Primavera': 'fa-seedling',
         'Verão': 'fa-sun',
         'Outuno': 'fa-tree',
         'Inverno': 'fa-snowflake'
